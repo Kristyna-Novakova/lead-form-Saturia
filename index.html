@@ -26,44 +26,47 @@
         <div class="se-body">
           <ul>
             <li>
-              <label
+              <!-- <label
                 for="frm-webFormHtmlRenderer-webFormForm-fields-df_name"
                 class="se-label se-required"
                 >Vaše jméno</label
-              >
+              > -->
               <input
                 type="text"
                 name="fields[df_name]"
                 id="frm-webFormHtmlRenderer-webFormForm-fields-df_name"
+                placeholder="Vaše jméno"
                 required
                 data-nette-rules='[{"op":":filled","msg":"Jméno je povinné pole"}]'
               />
             </li>
             <li>
-              <label
+              <!-- <label
                 for="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress"
                 class="se-label se-required"
                 >Váš e-mail</label
-              >
+              > -->
               <input
                 type="text"
                 name="fields[df_emailaddress]"
                 data-emailaddress="1"
                 id="frm-webFormHtmlRenderer-webFormForm-fields-df_emailaddress"
+                placeholder="Váš e-mail"
                 required
                 data-nette-rules='[{"op":":filled","msg":"Emailová adresa je povinné pole."},{"op":":email","msg":"Emailová adresa je povinné pole."},{"op":"SE20\\Validators\\TypesFormValidator::validateEmailAddress","msg":"Emailová adresa je povinné pole."}]'
               />
             </li>
             <li>
-              <label
+              <!-- <label
                 for="frm-webFormHtmlRenderer-webFormForm-fields-df_phone"
                 class="se-label se-required"
                 >Váš telefon</label
-              >
+              > -->
               <input
                 type="text"
                 name="fields[df_phone]"
                 id="frm-webFormHtmlRenderer-webFormForm-fields-df_phone"
+                placeholder="Váš telefon"
                 required
                 data-nette-rules='[{"op":":filled","msg":"Telefon je povinné pole"},{"op":":static","rules":[{"op":"SE20\\Validators\\TypesFormValidator::validatePhoneNumberWithPreprocessing","msg":"Telefon je povinné pole"}],"control":"fields[df_phone]","arg":true}]'
               />
@@ -72,8 +75,8 @@
         </div>
 
         <div class="se-submit">
-          <button type="submit" name="_submit" value="Zavolejte mi">
-            Zavolejte mi
+          <button type="submit" name="_submit" value="Kontaktujte mě">
+            Kontaktujte mě
           </button>
         </div>
       </div>
@@ -100,450 +103,6 @@
       />
     </form>
 
-    <style type="text/css">
-      #se-webform-6.se-webform,
-      .se-wrapper {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-      }
-      #se-webform-6.se-webform,
-      .se-wrapper,
-      #se-webform-6.se-webform *,
-      .se-wrapper * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-      #se-webform-6.se-webform {
-        width: 400px;
-        background: #fff;
-      }
-      #se-webform-6.se-webform > *,
-      #se-webform-6.se-webform .se-webform-inner > * {
-        width: 100%;
-      }
-      #se-webform-6.se-webform .se-header h3 {
-        margin: 0;
-        padding: 24px 24px 5px;
-      }
-      #se-webform-6.se-webform .se-image {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        margin-top: 15px;
-      }
-      #se-webform-6.se-webform .se-body ul {
-        margin: 0 5%;
-        padding: 0;
-        list-style: none;
-      }
-      #se-webform-6.se-webform .se-body ul li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0.5em 0;
-      }
-      #se-webform-6.se-webform .se-body ul li label.se-required:after {
-        content: ' *';
-        color: #f00;
-      }
-      #se-webform-6.se-webform .se-body ul li label {
-        display: block;
-        padding: 5px 0;
-        margin: 0;
-      }
-      #se-webform-6.se-webform .se-submit {
-        padding: 14px 24px 24px 24px;
-      }
-      #se-webform-6.se-webform .se-submit button,
-      #se-webform-6.se-webform .se-submit div.se-fake {
-        cursor: pointer;
-      }
-      #se-webform-6.se-webform .se-close {
-        width: auto;
-      }
-      #se-webform-6.se-webform .se-webform-sent-info,
-      #se-webform-6.se-webform .se-webform-sending-info {
-        display: none;
-      }
-      #se-webform-6.se-webform .se-webform-sent-info h3,
-      #se-webform-6.se-webform .se-webform-sending-info h3 {
-        text-align: center;
-        margin: 1em;
-      }
-      #se-webform-6.se-webform.se-webform-sent .se-header,
-      #se-webform-6.se-webform.se-webform-sending .se-header,
-      #se-webform-6.se-webform.se-webform-sent .se-body,
-      #se-webform-6.se-webform.se-webform-sending .se-body,
-      #se-webform-6.se-webform.se-webform-sent .se-text,
-      #se-webform-6.se-webform.se-webform-sending .se-text,
-      #se-webform-6.se-webform.se-webform-sent .se-submit,
-      #se-webform-6.se-webform.se-webform-sending .se-submit {
-        display: none;
-      }
-      #se-webform-6.se-webform.se-webform-sent .se-webform-sent-info {
-        display: block;
-      }
-      #se-webform-6.se-webform.se-webform-sending .se-webform-sent-info {
-        display: none;
-      }
-      #se-webform-6.se-webform.se-webform-sending .se-webform-sending-info {
-        display: block;
-      }
-      #se-webform-6.se-webform.se-has-image-aside {
-        display: table;
-      }
-      #se-webform-6.se-webform.se-has-image-aside .se-image-aside {
-        margin-top: 0;
-        display: table-cell !important;
-        width: 50%;
-      }
-      #se-webform-6.se-webform.se-has-image-aside .se-webform-inner {
-        display: table-cell !important;
-        vertical-align: middle;
-        width: 50%;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      #se-webform-6.se-webform.se-has-image-aside
-        .se-webform-inner
-        .se-header
-        h3 {
-        padding-left: 12px;
-        text-align: left;
-      }
-      #se-webform-6.se-webform.se-has-image-aside .se-webform-inner .se-image {
-        display: none;
-      }
-      #se-webform-6.se-webform.se-has-image-aside.se-shrink {
-        width: 100% !important;
-      }
-      #se-webform-6.se-webform.se-has-image-aside.se-shrink
-        .se-webform-inner
-        .se-image {
-        display: block;
-      }
-      #se-webform-6.se-webform.se-has-image-aside.se-shrink .se-image-aside {
-        display: none !important;
-      }
-      #se-webform-6.se-webform.se-has-image-aside.se-shrink .se-webform-inner {
-        padding-left: 0;
-        padding-right: 0;
-        display: block !important;
-        width: 100%;
-        vertical-align: none;
-      }
-      #se-webform-6.se-webform ul.se-errors {
-        list-style: none;
-        margin: 0;
-        padding: 0 10px;
-      }
-      #se-webform-6.se-webform ul.se-errors li {
-        color: #fff;
-        margin: 10px 0;
-        background: #da5555;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        padding: 0 10px;
-      }
-      #se-webform-6.se-webform ul.se-errors li div {
-        display: table-row;
-      }
-      #se-webform-6.se-webform ul.se-errors li div > * {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 8px 0;
-      }
-      #se-webform-6.se-webform ul.se-errors li .fa {
-        font-size: 30px;
-        padding-right: 15px;
-      }
-      #se-webform-6 .se-close a,
-      .se-close a {
-        font-size: 30px !important;
-        content: '\d7' !important;
-        cursor: pointer;
-        text-decoration: none !important;
-      }
-      .se-popup-open {
-        overflow: hidden;
-      }
-      .se-popup-open .se-popup {
-        overflow-x: hidden;
-        overflow-y: auto;
-      }
-      .se-backdrop {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 9998;
-        background-color: #000;
-      }
-      .se-backdrop.se-fade {
-        opacity: 0;
-        filter: alpha(opacity=0);
-      }
-      .se-backdrop.se-in {
-        opacity: 0.5;
-        filter: alpha(opacity=50);
-      }
-      .se-scrollbar-measure {
-        position: absolute;
-        top: -9999px;
-        width: 50px;
-        height: 50px;
-        overflow: scroll;
-      }
-      .se-popup {
-        display: none;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 9999;
-        -webkit-overflow-scrolling: touch;
-        outline: 0;
-      }
-      .se-popup.se-fade .se-popup-inner {
-        -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
-        -o-transform: translate(0, -25%);
-        transform: translate(0, -25%);
-        -webkit-transition: -webkit-transform 0.3s ease-out;
-        -o-transition: -o-transform 0.3s ease-out;
-        transition: transform 0.3s ease-out;
-      }
-      .se-popup.se-in .se-popup-inner {
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-        transform: translate(0, 0);
-      }
-      .se-popup .se-popup-inner {
-        position: relative;
-        width: auto;
-        margin: 10px auto;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform {
-        width: 100%;
-        position: relative;
-        border: 1px solid #999;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        outline: 0;
-        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-header {
-        min-height: 16.42857143px;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-header .se-close {
-        margin-top: -2px;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-body {
-        position: relative;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-submit:before,
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-submit:after {
-        content: ' ';
-        display: table;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-submit:after {
-        clear: both;
-      }
-      .se-popup .se-popup-inner #se-webform-6.se-webform .se-close {
-        position: absolute;
-        display: block;
-        top: 0;
-        right: 10px;
-      }
-      @media (min-width: 768px) {
-        .se-popup .se-popup-inner {
-          width: 350px;
-          margin: 30px auto;
-        }
-        .se-popup .se-popup-inner #se-webform-6.se-webform {
-          width: 100%;
-        }
-      }
-      .se-button {
-        width: auto;
-        display: none;
-        cursor: pointer;
-      }
-      .se-popup-button {
-        position: fixed;
-        text-align: right;
-        z-index: 999;
-        right: 5%;
-        bottom: 0;
-      }
-      .se-popup-button,
-      .se-popup-button * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-      @media (max-width: 768px) {
-        .se-popup-button {
-          width: 90%;
-        }
-      }
-      @media (min-width: 768px) {
-        .se-popup-button {
-          right: 10%;
-        }
-      }
-      .se-popup-button .se-image {
-        diplay: none;
-      }
-      .se-popup-button .se-button.se-top {
-        top: 0;
-      }
-      .se-popup-button .se-button.se-bottom {
-        bottom: 0;
-      }
-      .se-popup-button .se-button:hover {
-        -webkit-animation-name: shake;
-        -webkit-animation-duration: 0.8s;
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation-timing-function: linear;
-        -webkit-transform-origin: 50% 100%;
-      }
-      .se-popup-button .se-close {
-        display: none;
-      }
-      .se-popup-button .se-close:after {
-        clear: both;
-      }
-      .se-popup-button .se-container {
-        display: none;
-        text-align: left;
-      }
-      .se-popup-button #se-webform-6.se-webform {
-        display: none;
-      }
-      .se-popup-button.se-button-show .se-button {
-        display: inline-block;
-      }
-      .se-popup-button.se-open {
-        overflow-y: auto;
-      }
-      .se-popup-button.se-open .se-close {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 18px;
-        z-index: 999;
-      }
-      .se-popup-button.se-open .se-button {
-        display: none;
-        width: 100%;
-        cursor: inherit;
-      }
-      .se-popup-button.se-open #se-webform-6.se-webform {
-        width: 100%;
-      }
-      .se-popup-button.se-open .se-container {
-        display: block;
-        margin: 0 0 0 auto;
-        max-width: 100% !important;
-      }
-      @-webkit-keyframes shake {
-        0% {
-          -webkit-transform: translate(0, 5px) rotate(0);
-        }
-        10% {
-          -webkit-transform: translate(0, -5px) rotate(0);
-        }
-        20% {
-          -webkit-transform: translate(0, 5px) rotate(0);
-        }
-        30% {
-          -webkit-transform: translate(0, -5px) rotate(0);
-        }
-        40% {
-          -webkit-transform: translate(0, 4px) rotate(0);
-        }
-        50% {
-          -webkit-transform: translate(0, -4px) rotate(0);
-        }
-        60% {
-          -webkit-transform: translate(0, 3px) rotate(0);
-        }
-        70% {
-          -webkit-transform: translate(0, -3px) rotate(0);
-        }
-        80% {
-          -webkit-transform: translate(0, 2px) rotate(0);
-        }
-        90% {
-          -webkit-transform: translate(0, -2px) rotate(0);
-        }
-        100% {
-          -webkit-transform: translate(0, 0) rotate(0);
-        }
-      }
-      #se-webform-6.se-webform .se-submit .se-fake {
-        appearance: button;
-        -moz-appearance: button;
-        -webkit-appearance: button;
-      }
-      @media (max-width: 490px) {
-        #se-webform-6 {
-          width: 100% !important;
-        }
-        .se-webform-v2-slideup-container {
-          right: 0;
-        }
-      }
-    </style>
-    <style type="text/css">
-      .se-webform-inner span {
-        font-size: 12px;
-        font-weight: 400;
-      }
-
-      .se-webform-primary-purpose {
-        border-bottom: 1px solid #bbbbbb;
-        text-align: justify !important;
-        padding: 10px 0px 15px 0px !important;
-        margin: 5px 0 0 0 !important;
-        color: #444;
-      }
-
-      .se-license-agreement {
-        border-bottom: 1px solid #bbbbbb;
-        text-align: justify !important;
-      }
-
-      .se-license-agreement:last-of-type {
-        border-bottom: none !important;
-      }
-
-      .se-license-agreement span {
-        font-size: 12px;
-        font-weight: 400;
-      }
-
-      .se-license-agreement .se-checkbox input {
-        margin: 1px 5px 1px 0 !important;
-      }
-
-      .se-submit {
-        margin-top: 10px;
-      }
-    </style>
     <script>
       var __awaiter =
         (this && this.__awaiter) ||
